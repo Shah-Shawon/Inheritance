@@ -1,4 +1,4 @@
-public class SumWithAndWithoutSmallest {
+public class DifferenceWithAndWithoutSmallest {
     public static void main(String[] args) {
         int[] numbers= {12,11,15,37,65,80,22,98,30,15};
         int smallest,sum=0,diff,size;
