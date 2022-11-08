@@ -1,0 +1,71 @@
+package exercise_10_10;
+
+import java.util.ArrayList;
+
+public class Grid {
+    private String[][] data;
+    ArrayList<Location> dataLocations = new ArrayList<Location>();
+
+    public Grid(int numOfRows, int numOfColumns)
+    {
+        data = new String[numOfRows][numOfColumns];
+
+        // Set up each cell with "" as the string
+
+    }
+
+    public void add(int row, int column, String description)
+    {
+        data[row][column] = description;
+
+        Location newLocation = new Location(row, column);
+        dataLocations.add(newLocation);
+    }
+
+    public String getDescription(int row, int column)
+    {
+        return data[row][column];
+    }
+
+    public ArrayList<Location> getDescribedLocations()
+    {
+        ArrayList<Location> describedLocations = new ArrayList<Location>();
+
+        for(int i = 0; i < data.length; i++)
+        {
+            for(int j = 0; j < data[0].length; j++)
+            {
+                if(data[i][j] != null)
+                {
+                    Location loc = new Location(i, j);
+                    describedLocations.add(loc);
+                }
+            }
+        }
+
+        return describedLocations;
+    }
+
+    class Location
+    {
+        // Instance Variables
+        private int row;
+        private int column;
+        
+        public Location(int row, int column)
+        {
+            this.row = row;
+            this.column = column;
+        }
+
+        public int getRow()
+        {
+            return this.row;
+        }
+
+        public int getColumn()
+        {
+            return this.column;
+        }
+    }
+}
