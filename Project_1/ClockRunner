@@ -1,0 +1,14 @@
+public class ClockRunner {
+    public static void main(final String[] args) {
+
+        Clock myClock = new Clock();
+
+        System.out.println("My Time: " + myClock.getTime());
+
+
+        WorldClock worldClock = new WorldClock(3);
+
+        System.out.println("My Time + 3: " + worldClock.getTime());
+
+    }
+}
